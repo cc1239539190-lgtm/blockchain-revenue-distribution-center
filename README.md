@@ -1,14 +1,13 @@
-# 19_CreatorRevenueCenter-On-chain
+# blockchain-revenue-distribution-center
 
 `CreatorRevenueCenter-On-chain` 是一个围绕“创作者月度结算与链上自动分账”构建的 `Next 业务型 + Ponder 索引分支` On-chain Demo。  
-它不处理原始广告日志，也不引入 ZK，而是把平台月度结算后的最终结果做成可领取账单，再由合约以 Anvil 原生 `ETH` 完成链上 `claim` 和协作者自动分账。
+它不处理原始广告日志，而是把平台月度结算后的最终结果做成可领取账单，再由合约以 Anvil 原生 `ETH` 完成链上 `claim` 和协作者自动分账。
 
-![创作者收益中心封面图](./docs-assets/creator-revenue-cover.png)
 
 ## 项目定位
 
 - 用户表层体验是“账单、领取、分账、流水”，不是协议控制台。
-- 架构采用 `Next.js App Router + TypeScript + wagmi + viem`，不引入 `NestJS`。
+- 架构采用 `Next.js App Router + TypeScript + wagmi + viem`。
 - 链上事件索引从 `v1` 开始纳入 `Ponder + PGlite`，但私有账单源数据仍然只保留在 `frontend/server-data/`。
 - `/platform` 只做演示控制台，不扩展成完整平台后台。
 - `/ledger` 以当前钱包的个人明细延伸为主，不做纯公开透明公告板。
@@ -51,24 +50,33 @@
 6. 合约自动把原生 `ETH` 分到创作者与协作者。
 7. 前端与索引层同步展示领取记录和到账明细。
 
-![平台页流程控制截图](./docs-assets/creator-revenue-platform-page.png)
 
-## 界面截图
+## demo
 
+### 四种不同的角色
 ![platforms](./docs-assets/1.png)
 ![creators](./docs-assets/2.png)
 ![collaborator1](./docs-assets/3.png)
 ![collaborator2](./docs-assets/4.png)
 ![tourist](./docs-assets/5.png)
+### 平台方激活创作方当月的revenue，本地链上查询（foundry）
+![activated](./docs-assets/6.png)
+![activated](./docs-assets/7.png)
+### 创作方领取收益，并签名
+![activated](./docs-assets/8.png)
+![activated](./docs-assets/9.png)
+### 协作者无需任何操作，待创作方领取后，会按预前敲定的收益分成自动分发
+![activated](./docs-assets/10.png)
+![activated](./docs-assets/11.png)
+### 为了模拟多个月份的历史记录查询，提前发放7月份和8月份的revenue
+![activated](./docs-assets/12.png)
+![activated](./docs-assets/13.png)
+### 平台方与创作方发生纠纷时，平台方该月度状态的控制
+![activated](./docs-assets/14.png)
+![activated](./docs-assets/15.png)
+### 如果关闭当月的批次，那么平台方当月的发放会进入黑洞合约
+![activated](./docs-assets/16.png)
 
-
-## 5 分钟跑通
-
-### 前置依赖
-
-- 已安装 `Foundry`
-- 已安装 `Node.js 22+`
-- 已安装 `npm`
 
 ### 一键开发
 
@@ -76,71 +84,4 @@
 cd 19_CreatorRevenueCenter-On-chain
 make dev
 ```
-
-默认端口：
-
-- `Anvil`: `8545`
-- `Next`: `3000`
-- `Ponder`: `42069`
-
-`make dev` 会从这些默认值开始尝试；如果发现端口被占用，会自动切到下一个可用端口，并把本次实际端口写入根目录的 `.dev-session.env`。
-
-如果你希望从自定义起始端口开始继续顺延，也可以这样运行：
-
-```bash
-cd 19_CreatorRevenueCenter-On-chain
-WEB_PORT=3019 INDEXER_PORT=42079 ANVIL_PORT=8555 make dev
-```
-
-## 常用命令
-
-```bash
-make build-contracts
-make deploy
-make web
-make indexer
-make test
-make clean
-make stop
-```
-
-命令说明：
-
-- `make build-contracts`：编译合约并同步 ABI / runtime config。
-- `make deploy`：部署合约、生成动态月份样例（当前月活动批次，前 3 个月历史分别为 `50 / 100 / 200 ETH`），并同步前端和索引配置。
-- `make web`：只启动 Next 前端。
-- `make indexer`：只启动 Ponder 索引分支。
-- `make test`：运行合约、前端、索引层静态检查。
-
-
-## 代码架构
-
-### 合约层
-
-- `RevenueBatchRegistry.sol`
-- `CreatorRevenueDistributor.sol`
-
-### 前端层
-
-- 首页 `/`：收益中心入口页
-- 创作者页 `/creator`
-- 领取页 `/creator/claim`
-- 历史页 `/creator/history`
-- 平台页 `/platform`
-- 流水页 `/ledger`
-
-### 索引层
-
-- `services/indexer/ponder.config.ts`
-- `services/indexer/ponder.schema.ts`
-- `services/indexer/src/index.ts`
-- `services/indexer/src/api/index.ts`
-
-## 运行时与数据边界
-
-- 公开数据：批次状态、领取结果、分账事件、公开统计卡
-- 服务端私有数据：月度账单源文件、Merkle 输入、未发布 claim package
-- 用户本地数据：钱包会话、筛选器、最近交互状态
-- 链上与索引数据：批次、claim、split 记录及其统计读模型
-
 
