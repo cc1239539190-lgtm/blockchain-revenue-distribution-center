@@ -1,8 +1,7 @@
 # blockchain-revenue-distribution-center
 
-`CreatorRevenueCenter-On-chain` 是一个围绕“创作者月度结算与链上自动分账”构建的 `Next 业务型 + Ponder 索引分支` On-chain Demo。  
+这是一个围绕“创作者月度结算与链上自动分账”构建的 `Next 业务型 + Ponder 索引分支` 链上演示。  
 它不处理原始广告日志，而是把平台月度结算后的最终结果做成可领取账单，再由合约以 Anvil 原生 `ETH` 完成链上 `claim` 和协作者自动分账。
-
 
 ## 项目定位
 
