@@ -6,7 +6,11 @@
       "Read(///wsl.localhost/Ubuntu/home/lzw12/cProject/**)",
       "Read(///wsl.localhost/Ubuntu/home/lzw12/cProject/frontend/**)",
       "Read(///wsl.localhost/Ubuntu/home/lzw12/cProject/services/indexer/**)",
-      "Read(///wsl.localhost/Ubuntu/home/lzw12/cProject/contracts/**)"
+      "Read(///wsl.localhost/Ubuntu/home/lzw12/cProject/contracts/**)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git branch *)"
     ]
   }
 }
