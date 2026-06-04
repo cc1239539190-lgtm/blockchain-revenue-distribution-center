@@ -1,0 +1,12 @@
+{
+    "peacock.color": "#61dafb",
+    "cSpell.ignorePaths": [
+        ".next",
+        "node_modules",
+        "contracts/cache",
+        "contracts/out",
+        "contracts/broadcast",
+        "services/indexer/.ponder",
+        "services/indexer/generated"
+    ]
+}

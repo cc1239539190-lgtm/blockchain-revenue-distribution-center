@@ -1,0 +1,26 @@
+{
+  "batchRegistryAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "distributorAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "chainId": 31337,
+  "rpcUrl": "http://127.0.0.1:8545",
+  "deploymentId": "creator-revenue-center-31337",
+  "demoAddresses": {
+    "platform": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "creator": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "collaboratorA": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "collaboratorB": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  },
+  "activeBatchId": "0xce254b875e785eecf41a8fdacf4f4dd7790cdf1278d23ae83818d4cf3f655bf5",
+  "activeBatchLabel": "2026-09",
+  "activeBillId": "BILL-202609-CREATOR",
+  "activeBatchRoot": "0xecb47364b264a924303142340804069d532efab552bbd71eedaa936015c812ef",
+  "activeMetadataHash": "0xc90d04d0b95c1b0c5f53697311049f0af8b971a9ed71d555c2c2b2d66b28eaa6",
+  "startBlock": 1,
+  "indexerBaseUrl": "http://127.0.0.1:42069",
+  "batchLabelMap": {
+    "0xc4b8b31f98d8150809370228ee35e46d9d5796d9c042306f9dee6e10e1d04b41": "2026-06",
+    "0xb963dcb188a3ebf5e0a31e6e0c952d1df2e3a3f8001f82fcdf264bbee0c9e8d8": "2026-07",
+    "0xd0b31d193045bdd7e21b41bca5db62cad5f4a743988cc7643a90ba7b6b74139c": "2026-08",
+    "0xce254b875e785eecf41a8fdacf4f4dd7790cdf1278d23ae83818d4cf3f655bf5": "2026-09"
+  }
+}

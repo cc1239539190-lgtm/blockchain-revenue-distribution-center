@@ -1,0 +1,17 @@
+{
+  "batchIdHex": "0xce254b875e785eecf41a8fdacf4f4dd7790cdf1278d23ae83818d4cf3f655bf5",
+  "claimIdHex": "0xf33d216f4008b054cb0de8ea63018f26cbfa1370b570679f04b0ce454ad172d6",
+  "creator": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "grossAmount": "404000000000000000000",
+  "recipients": [
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  ],
+  "bps": [
+    6000,
+    2000,
+    2000
+  ],
+  "merkleProof": []
+}

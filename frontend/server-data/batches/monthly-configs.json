@@ -1,0 +1,30 @@
+[
+  {
+    "monthLabel": "2026-09",
+    "grossAmount": "404000000000000000000",
+    "updatedAt": "2026-06-04T07:55:21.786Z",
+    "isLocked": true,
+    "lockedAt": "2026-06-04T07:55:21.786Z"
+  },
+  {
+    "monthLabel": "2026-08",
+    "grossAmount": "50000000000000000000",
+    "updatedAt": "2026-06-04T07:37:43.792Z",
+    "isLocked": true,
+    "lockedAt": "2026-06-04T07:37:43.792Z"
+  },
+  {
+    "monthLabel": "2026-07",
+    "grossAmount": "100000000000000000000",
+    "updatedAt": "2026-06-04T07:33:58.152Z",
+    "isLocked": true,
+    "lockedAt": "2026-06-04T07:33:58.152Z"
+  },
+  {
+    "monthLabel": "2026-06",
+    "grossAmount": "200000000000000000000",
+    "updatedAt": "2026-06-04T07:20:35.631Z",
+    "isLocked": true,
+    "lockedAt": "2026-06-04T07:20:35.631Z"
+  }
+]
