@@ -80,7 +80,7 @@
 ### 一键开发
 
 ```bash
-cd 19_CreatorRevenueCenter-On-chain
+cd blockchain-revenue-distribution-center
 make dev
 ```
 
